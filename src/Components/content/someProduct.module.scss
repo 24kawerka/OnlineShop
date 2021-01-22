@@ -1,0 +1,73 @@
+@mixin font_f($fs) {
+    font-family: "Ribik", sans-serif;
+    font-size: $fs;
+}
+.container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-areas:
+        "title_block info_block"
+        "reviews_block reviews_block";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 40%;
+
+    .title_block {
+        grid-area: title_block;
+
+        .photo {
+            width: 500px;
+            height: 360px;
+            margin-top: 30px;
+        }
+    }
+
+    .info_block {
+        grid-area: info_block;
+
+        .price_info {
+            @include font_f(40px);
+        }
+        .product_info {
+            @include font_f(20px);
+            margin-bottom: 5px;
+        }
+        .button_text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include font_f(40px);
+        }
+    }
+    .reviews_block {
+        grid-area: reviews_block;
+        margin-top: 40px;
+        width: 500px;
+        .reviews_title {
+            @include font_f(40px);
+        }
+
+        .review {
+            border: 1px outset grey;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 10px;
+            @include font_f(20px);
+
+            .user_info {
+                display: flex;
+                border-bottom: 1px outset grey;
+                @include font_f(20px);
+
+                .user_logo {
+                    width: 25px;
+                    height: 25px;
+                    margin-right: 20px;
+                }
+            }
+
+            .user_message {
+                @include font_f(20px);
+            }
+        }
+    }
+}

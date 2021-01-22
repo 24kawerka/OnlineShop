@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    .activePage {
+        font-size: 30px;
+        margin-right: 10px;
+        color: red;
+        cursor: pointer;
+    }
+    .page {
+        margin-right: 30px;
+        font-size: 30px;
+        list-style-type: none;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .buttons {
+        list-style-type: none;
+        margin-right: 30px;
+        font-size: 30px;
+    }
+}

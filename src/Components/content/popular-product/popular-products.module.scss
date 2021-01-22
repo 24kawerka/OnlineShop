@@ -1,0 +1,39 @@
+@mixin font_s($f) {
+  font-family: "Ribik", sans-serif;
+  font-size: $f;
+}
+
+.category {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  @include font_s(22px);
+}
+
+.row__block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+
+  .photo {
+    padding: auto;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    text-align: center;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 15px;
+    @include font_s(14px);
+
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  .price {
+    @include font_s(30px);
+  }
+}

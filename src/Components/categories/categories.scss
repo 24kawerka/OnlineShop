@@ -1,0 +1,39 @@
+%text_c {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.categories {
+    border-bottom: 0.3px solid white;
+    font-size: 18px;
+    background-color: rgb(32, 32, 32);
+    color: white;
+
+    .categories__element {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @extend %text_c;
+
+        .link {
+            @extend %text_c;
+
+            &:visited {
+                @extend %text_c;
+            }
+        }
+    }
+}
+
+.categories__element:hover {
+    text-decoration: underline !important;
+    color: white !important;
+}
+.categories__discount {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid white;
+    padding-left: 30px;
+}

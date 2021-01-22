@@ -1,0 +1,37 @@
+.container {
+    margin-top: 30px;
+    display: flex;
+
+    .photoSmall {
+        width: 180px;
+        height: 140px;
+    }
+    .title {
+        font-family: "Rubik", sans-serif;
+        font-size: 15px;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .price {
+        font-family: "Rubik", sans-serif;
+        font-size: 30px;
+    }
+}
+
+.total_container {
+    display: flex;
+    margin-top: 30px;
+
+    .total {
+        margin-right: 20px;
+    }
+}
+
+.someText {
+    font-size: 30px;
+}

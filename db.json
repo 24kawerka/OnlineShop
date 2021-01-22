@@ -1,0 +1,335 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "title": "ZTE BLADE V2020 6/128 GB White",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/600x415/602f0fa2c1f0d1ba5e241f914e856ff9/p/o/positive-b-ok.jpg",
+      "price": 5499,
+      "screen_diagonal": "6.53",
+      "screen_resolution": "2340x1080",
+      "camera": "48 Mp + 8 Mp + 2 Mp + 2 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "128 Gb",
+      "Protection_standard": "no protect",
+      "rating": 3
+    },
+    {
+      "id": 2,
+      "title": "Samsung Galaxy Note20 8/256GB Green (SM-N980FZGGSEK)",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/600x415/602f0fa2c1f0d1ba5e241f914e856ff9/s/m/sm-n980_981_galaxynote20_back_pen_mysticgreen_200620dsgff.jpg",
+      "price": 24999,
+      "screen_diagonal": "6.7",
+      "screen_resolution": "2400x1080",
+      "camera": "12 Mp + 64 Mp + 12 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "256 Gb",
+      "Protection_standard": "IP68",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "title": "OPPO Reno 4 Lite 8/128 CPH2125 Matte Black",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/600x415/602f0fa2c1f0d1ba5e241f914e856ff9/o/p/oppo-reno4_black_1.jpg",
+      "price": 35999,
+      "screen_diagonal": "6.43",
+      "screen_resolution": "2400x1080",
+      "camera": "48 Mp + 8 Mp + 2 Mp + 2 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "128 Gb",
+      "Protection_standard": "no protect",
+      "rating": 4
+    },
+    {
+      "id": 4,
+      "title": "Samsung Galaxy Note20 Ultra 8/256GB Bronze (SM-N985FZNGSEK)",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/600x415/602f0fa2c1f0d1ba5e241f914e856ff9/s/m/sm-n985_986_galaxynote20ultra_back_pen_mysticbronze_20060511.jpg",
+      "price": 9999,
+      "screen_diagonal": "6.9",
+      "screen_resolution": "3100x1440",
+      "camera": "108 Mp + 12 Mp + 12 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "256 Gb",
+      "Protection_standard": "IP68",
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "title": "Xiaomi Redmi Note 8 Pro 6/128GB Green",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/425x295/602f0fa2c1f0d1ba5e241f914e856ff9/f/i/file_1282_5.jpg",
+      "price": 5999,
+      "screen_diagonal": "6.53",
+      "screen_resolution": "2340x1080",
+      "camera": "64 Mp + 8 Mp + 2 Mp + 2 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "128 Gb",
+      "Protection_standard": "no protect",
+      "rating": 3
+    },
+    {
+      "id": 6,
+      "title": "Xiaomi Mi 10T Pro 8/256GB Lunar Silver",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/425x295/602f0fa2c1f0d1ba5e241f914e856ff9/j/3/j3a1d4_11_2_1.jpg",
+      "price": 16999,
+      "screen_diagonal": "6.7",
+      "screen_resolution": "2400x1080",
+      "camera": "12 Mp + 64 Mp + 12 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "256 Gb",
+      "Protection_standard": "IP68",
+      "rating": 4
+    },
+    {
+      "id": 7,
+      "title": "Xiaomi Redmi Note 9 4/128GB Forest Green",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/425x295/602f0fa2c1f0d1ba5e241f914e856ff9/f/i/file_1738.jpg",
+      "price": 5499,
+      "screen_diagonal": "6.53",
+      "screen_resolution": "2340x1080",
+      "camera": "48 Mp + 8 Mp + 2 Mp + 2 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "128 Gb",
+      "Protection_standard": "no protect",
+      "rating": 5
+    },
+    {
+      "id": 8,
+      "title": "Xiaomi Redmi Note 9 Pro 6/128GB Tropical Green",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/425x295/602f0fa2c1f0d1ba5e241f914e856ff9/j/6/j691d6_1__2_1.jpg",
+      "price": 7399,
+      "screen_diagonal": "6.67",
+      "screen_resolution": "2400x1080",
+      "camera": "64 Mp + 8 Mp + 5 Mp+ 2 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "128 Gb",
+      "Protection_standard": "IP68",
+      "rating": 5
+    },
+    {
+      "id": 9,
+      "title": "Apple iPhone 12 Pro 128GB Graphite (MGMK3)",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/425x295/602f0fa2c1f0d1ba5e241f914e856ff9/i/p/iphone-12-pro-max-graphite-hero_2.jpg",
+      "price": 44999,
+      "screen_diagonal": "6.1",
+      "screen_resolution": "2532x1170",
+      "camera": "12 Mp + 12 Mp + 12 Mp",
+      "Number_of_Cores": "6",
+      "inner_memory": "128 Gb",
+      "Protection_standard": "IP68",
+      "rating": 4
+    },
+    {
+      "id": 10,
+      "title": "Xiaomi Black Shark 3 8/128GB Lightning Black EU",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/425x295/602f0fa2c1f0d1ba5e241f914e856ff9/x/i/xiaomi_black_shark_3_black_4_1.jpg",
+      "price": 14999,
+      "screen_diagonal": "6.53",
+      "screen_resolution": "2340x1080",
+      "camera": "48 Mp + 8 Mp + 2 Mp + 2 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "128 Gb",
+      "Protection_standard": "no protect",
+      "rating": 5
+    },
+    {
+      "id": 11,
+      "title": "ZTE BLADE V2020 6/128 GB White",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/600x415/602f0fa2c1f0d1ba5e241f914e856ff9/p/o/positive-b-ok.jpg",
+      "price": 5499,
+      "screen_diagonal": "6.53",
+      "screen_resolution": "2340x1080",
+      "camera": "48 Mp + 8 Mp + 2 Mp + 2 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "128 Gb",
+      "Protection_standard": "no protect",
+      "rating": 5
+    },
+    {
+      "id": 12,
+      "title": "iPhone SE 128GB White (MXD12FS/A)",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/425x295/602f0fa2c1f0d1ba5e241f914e856ff9/i/p/iphone-se-white-select-2020_geo_emea_5.jpg",
+      "price": 5499,
+      "screen_diagonal": "6.53",
+      "screen_resolution": "2340x1080",
+      "camera": "48 Mp + 8 Mp + 2 Mp + 2 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "128 Gb",
+      "Protection_standard": "no protect",
+      "rating": 5
+    },
+    {
+      "id": 13,
+      "title": "Xiaomi Redmi Note 9 Pro 6/64GB Glacier White",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/425x295/602f0fa2c1f0d1ba5e241f914e856ff9/f/i/file_1739_1_2.jpg",
+      "price": 6499,
+      "screen_diagonal": "6.53",
+      "screen_resolution": "2340x1080",
+      "camera": "48 Mp + 8 Mp + 2 Mp + 2 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "128 Gb",
+      "Protection_standard": "no protect",
+      "rating": 2
+    },
+    {
+      "id": 14,
+      "title": "Xiaomi Poco X3 6/128GB Shadow Gray",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/425x295/602f0fa2c1f0d1ba5e241f914e856ff9/j/2/j20c-grey-__result_2_1.jpg",
+      "price": 7499,
+      "screen_diagonal": "6.53",
+      "screen_resolution": "2340x1080",
+      "camera": "48 Mp + 8 Mp + 2 Mp + 2 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "128 Gb",
+      "Protection_standard": "no protect",
+      "rating": 5
+    },
+    {
+      "id": 15,
+      "title": "Xiaomi Redmi Note 9 Pro 6/128GB Interstellar Grey",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/425x295/602f0fa2c1f0d1ba5e241f914e856ff9/j/6/j6b-__1.jpg",
+      "price": 6999,
+      "screen_diagonal": "6.53",
+      "screen_resolution": "2340x1080",
+      "camera": "48 Mp + 8 Mp + 2 Mp + 2 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "128 Gb",
+      "Protection_standard": "no protect",
+      "rating": 4
+    },
+    {
+      "id": 16,
+      "title": "Samsung Galaxy A31 4/64GB Red (SM-A315FZRUSEK)",
+      "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/425x295/602f0fa2c1f0d1ba5e241f914e856ff9/s/a/samsung_sm_a315fzrusek_images_17536994755_1.jpg",
+      "price": 5999,
+      "screen_diagonal": "6.53",
+      "screen_resolution": "2340x1080",
+      "camera": "48 Mp + 8 Mp + 2 Mp + 2 Mp",
+      "Number_of_Cores": "8",
+      "inner_memory": "128 Gb",
+      "Protection_standard": "no protect",
+      "rating": 5
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Максим",
+      "lastName": "Фарбун",
+      "email": "qwewerka@gmail.com",
+      "password": "12345678",
+      "id": 1
+    }
+  ],
+  "reviews": [
+    {
+      "name": "OLEG",
+      "message": "Good choise",
+      "rating": "5",
+      "productId": "1",
+      "id": 1
+    },
+    {
+      "name": "Вороніна",
+      "message": "2111111111111111",
+      "rating": "5",
+      "productId": "2",
+      "id": 2
+    },
+    {
+      "name": "Вороніна",
+      "message": "2111111111111111",
+      "rating": "5",
+      "productId": "5",
+      "id": 3
+    },
+    {
+      "name": "Anna",
+      "message": "Very good choise ",
+      "rating": "4",
+      "productId": "8",
+      "id": 4
+    },
+    {
+      "name": "Max",
+      "message": "bad battery",
+      "rating": "3",
+      "productId": "9",
+      "id": 5
+    },
+    {
+      "name": "Максим",
+      "message": "2111111111111111",
+      "rating": "1",
+      "productId": "6",
+      "id": 6
+    },
+    {
+      "name": "Anna",
+      "message": "Very good phone!",
+      "rating": "5",
+      "productId": "9",
+      "id": 7
+    }
+  ],
+  "checkout": [
+    {
+      "cart": [
+        {
+          "id": 3,
+          "title": "OPPO Reno 4 Lite 8/128 CPH2125 Matte Black",
+          "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/600x415/602f0fa2c1f0d1ba5e241f914e856ff9/o/p/oppo-reno4_black_1.jpg",
+          "price": "35999",
+          "screen_diagonal": "6.43",
+          "screen_resolution": "2400x1080",
+          "camera": "48 Mp + 8 Mp + 2 Mp + 2 Mp",
+          "Number_of_Cores": "8",
+          "inner_memory": "128 Gb",
+          "Protection_standard": "no protect",
+          "itemNumber": 1
+        }
+      ],
+      "totalPrice": 35999,
+      "userInfo": {
+        "firstName": "Максим",
+        "tel": "0635991080",
+        "email": "qwewerka@gmail.com"
+      },
+      "id": 1
+    },
+    {
+      "cart": [
+        {
+          "id": 3,
+          "title": "OPPO Reno 4 Lite 8/128 CPH2125 Matte Black",
+          "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/600x415/602f0fa2c1f0d1ba5e241f914e856ff9/o/p/oppo-reno4_black_1.jpg",
+          "price": "35999",
+          "screen_diagonal": "6.43",
+          "screen_resolution": "2400x1080",
+          "camera": "48 Mp + 8 Mp + 2 Mp + 2 Mp",
+          "Number_of_Cores": "8",
+          "inner_memory": "128 Gb",
+          "Protection_standard": "no protect",
+          "itemNumber": 2
+        },
+        {
+          "id": 2,
+          "title": "Samsung Galaxy Note20 8/256GB Green (SM-N980FZGGSEK)",
+          "photo": "https://i.allo.ua/media/catalog/product/cache/1/image/600x415/602f0fa2c1f0d1ba5e241f914e856ff9/s/m/sm-n980_981_galaxynote20_back_pen_mysticgreen_200620dsgff.jpg",
+          "price": "24999",
+          "screen_diagonal": "6.7",
+          "screen_resolution": "2400x1080",
+          "camera": "12 Mp + 64 Mp + 12 Mp",
+          "Number_of_Cores": "8",
+          "inner_memory": "256 Gb",
+          "Protection_standard": "IP68",
+          "itemNumber": 1
+        }
+      ],
+      "totalPrice": 96997,
+      "userInfo": {
+        "firstName": "Максим",
+        "tel": "0635991080",
+        "email": "qwewerka@gmail.com"
+      },
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+.navbar__block {
+  font-size: 30px;
+  font-weight: bold;
+  grid-area: navbar;
+  margin-top: 70px;
+
+  .navbar__li {
+    list-style-type: none;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none !important;
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+
+    &.link {
+      text-decoration: none !important;
+      color: black !important;
+    }
+  }
+}
+.link:visited {
+  color: black;
+}
+.link .category {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  font-family: "Ribik", sans-serif;
+}
+.title {
+  font-family: "Ribik", sans-serif;
+  text-align: center;
+  text-align: left;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 15px;
+}
+.title:hover {
+  text-decoration: none;
+  color: black;
+}
+.price {
+  font-family: "Ribik", sans-serif;
+  font-size: 30px;
+}
+.row__block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.photo {
+  padding: auto;
+  margin-bottom: 20px;
+}

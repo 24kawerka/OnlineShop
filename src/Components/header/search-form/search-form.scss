@@ -1,0 +1,62 @@
+.example {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 10%;
+  height: 50px;
+}
+form.example input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 350px;
+  background: #f1f1f1;
+  border-radius: 4px 0 0 4px;
+}
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: rgb(208, 20, 24);
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+form.example button:hover {
+  background: rgb(0, 0, 0);
+}
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+%bg {
+  z-index: 1000;
+  background-color: white;
+}
+
+.search_container {
+  display: block;
+  @extend %bg;
+}
+.search_list {
+  @extend %bg;
+}
+.li_search {
+  @extend %bg;
+  font-size: 14px;
+  color: black;
+  list-style-type: none;
+  text-align: left;
+}
+.ul_search {
+  @extend %bg;
+  width: 350px;
+  border: 2px solid black;
+  padding-left: 2%;
+}
