@@ -1,3 +1,4 @@
+import { LIMIT } from "../constants/PaginationConstant"
 import { SET_CURRENT_PAGE } from "./actionTypes"
 
 export type InitialPaginationStateType = {
@@ -5,7 +6,7 @@ export type InitialPaginationStateType = {
     currentPage: number
 }
 const InitialPaginationState = {
-    limitProducts: 8,
+    limitProducts: LIMIT,
     currentPage: 1
 }
 

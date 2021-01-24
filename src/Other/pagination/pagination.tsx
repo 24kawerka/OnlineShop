@@ -6,16 +6,12 @@ import s from './pagination.module.scss'
 import ReactPaginate from 'react-paginate'
 
 export const PaginationPage = () => {
-    const paginationState = useSelector((state: any) => state.pagination)
+    const paginationState = useSelector((state: any) => state.pagination)//typesation
     const totalCount = useSelector((state: any) => state.allProducts.totalCount)
     const pagesCount = Math.ceil(totalCount / paginationState.limitProducts)
     const sortParam: any = useSelector((state: any) => state.sort)
     const dispatch = useDispatch()
 
-    const pages: Array<number> = []
-    for (let i = 1; i <= pagesCount; i++) {
-        pages.push(i)
-    }
     const handleClick = (p: any) => {
         dispatch(setCurrentPage(p.selected + 1))
         dispatch(ProductThunk(p.selected + 1, paginationState.limitProducts, sortParam.sortParam, sortParam.order))

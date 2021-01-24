@@ -35,7 +35,7 @@ export const Routes = () => {
     return (
         <>
             <Switch>
-                <Route exact path='/home' component={Content} />
+                <Route exact path='/' component={Content} />
                 <Route exact path='/catalog' component={Catalog} />
                 <Route exact path='/phones' component={Phones} />
                 <Route exact path='/games' component={Games} />
@@ -63,7 +63,6 @@ export const Routes = () => {
                 <Route exact path='/extras/news' component={News} />
                 <Route exact path='/extras/special_product' component={SpecialProduct} />
                 <Route exact path='/extras/featured_product' component={FeaturedProduct} />
-                <Redirect exact from='/' to='/home' />
 
                 <Route exact path='/account/register' component={Register} />
                 <Route exact path='/account/login' component={Login} />

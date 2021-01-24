@@ -1,12 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { SortingButton } from '../../../Other/sortingButton/sortingButton';
-//@ts-ignore
-import ReactStars from "react-rating-stars-component";
 import { pType } from '../../../Types/types';
 import { useDispatch, useSelector } from 'react-redux';
 import { addItem } from '../../../redux/cartReducer';
 import s from './../../content/popular-product/popular-products.module.scss'
+const ReactStars: any = require("react-rating-stars-component");
 
 
 export const SearchResult = (props: any) => {
@@ -35,7 +34,7 @@ export const SearchResult = (props: any) => {
                                         write review
                                 </button>
                                 </NavLink>
-                                <div className={s.price}>{p.price}grn</div>
+                                <div className={s.price}>{p.price}UAH</div>
                                 {stateCart.includes(p.id) ? <button className="btn btn-success">Added</button> :
                                     <button onClick={() => dispatch(addItem(p))} className='btn btn-dark'
                                     > Add to Cart</button>}

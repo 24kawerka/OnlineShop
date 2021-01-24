@@ -5,14 +5,14 @@ import s from './preloader.module.scss'
 
 export const PreloaderFullScreen = () => {
     const isFetching = useSelector((state: any) => state.toogleIsFetching.isFetching)
+
+    if(!isFetching) return null;
     return (
-        <div>
-            {(isFetching) ? <div className={s.preloader_container}>
-                <div className={s.preloader}>
-                    <HashLoader
-                        size={150}
-                    /></div></div> : null}
-        </div>
+        <div className={s.preloader_container}>
+        <div className={s.preloader}>
+            <HashLoader
+                size={150}
+            /></div></div>
     )
 }
 

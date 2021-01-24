@@ -5,7 +5,11 @@ const InitialStateCart: InitialStateCartType = {
     cart: [],
     totalPrice: 0,
 }
-
+///
+//
+// style code !!!!!!!!!!!!!!!!!
+//
+//
 export const addItem = (p: pType) => {
     return {
         type: ADD_TO_CART,

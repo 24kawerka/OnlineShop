@@ -1,5 +1,6 @@
 import { GET_REVIEWS, GET_USERS, SET_PRODUCT, SORT_BY } from '../redux/actionTypes'
 
+// TS type & interface
 type ProductAction = {
     type: typeof SET_PRODUCT;
     product: Array<{ id: number, photo: string, title: string, price: number }>
@@ -30,7 +31,7 @@ export type someProductType = {
     Protection_standard: string | undefined,
     reviews: Array<{ id: number, name: string, message: string, rating: number }>
 }
-export type pType = { photo: string, title: string, price: number, id: number, itemNumber: number, rating: number }
+export type pType = { photo: string, title: string, price: number, id: number, itemNumber: number, rating: number }//strange name
 
 type ReviewsAction = {
     type: typeof GET_REVIEWS;

@@ -30,7 +30,10 @@ export const SearchForm = () => {
 
     return (
         <div className='search-form'>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+            {
+                //inner public/index.html
+                // or https://www.npmjs.com/package/react-helmet
+            }
             <form className="example"
                 onKeyPress={(e) => onKeyPressEvent(e, resultSearch)}>
                 <div className='search_container'>

@@ -7,6 +7,8 @@ import { getSomeProduct } from './someProductReducer';
 import { toogleIsFetching } from './toogleisFetchingReducer';
 import { getUsers } from './usersReducer';
 
+//axios instance (for default url request)
+
 export const ProductThunk = (currentPage: number, limitProducts: number, sortParam: any, order: string) =>
     async (dispatch: any) => {
         dispatch(toogleIsFetching(true))
@@ -19,8 +21,8 @@ export const ProductThunk = (currentPage: number, limitProducts: number, sortPar
                 console.log(error);
             });
     }
-export const AllProductThunk = () => async (dispatch: any) => {
-    dispatch(toogleIsFetching(true))
+export const AllProductThunk = () => async (dispatch: any) => { //await asymc
+   dispatch(toogleIsFetching(true))
     axios.get(`http://localhost:3001/product`)
         .then((resp: AxiosResponse<any>) => {
             dispatch(toogleIsFetching(false))
@@ -48,13 +50,17 @@ export const getReviewsThunk = async (dispatch: any) => {
 
         })
 }
-type userType = {
-    first_name: string,
-    second_name: string,
+type UserTypeFetchData = { // UpperCase = type
+    firstName: string, // camelCase
+    second_name: string, 
     email: string,
     password: any,
     id: number
 }
+type User {
+    secondName: string; //
+}
+
 type messageType = {
     name: string,
     message: string,
@@ -63,7 +69,7 @@ type messageType = {
 }
 export const createAccountThunk = (user: userType) => async (dispatch: any) => {
     dispatch(toogleIsFetching(true))
-    axios.post(`http://localhost:3001/users`, user)
+    axios.post<UserTypeFetchData>(`http://localhost:3001/users`, user)
         .then(dispatch(toogleIsFetching(false)))
         .catch(err => console.log(err.response.data))
 }

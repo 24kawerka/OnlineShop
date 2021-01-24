@@ -3,8 +3,12 @@ import { NavLink } from 'react-router-dom'
 import s from './navbar.module.scss'
 
 export const Navbar = () => {
+
     return (<div className={s.navbar__block}>
         <ul>
+            {
+                //map
+            }
             <li className={s.navbar__li}><NavLink to='/home' className={s.link}>Home</NavLink></li>
             <li className={s.navbar__li}><NavLink to='/catalog' className={s.link}>Catalog</NavLink></li>
             <li className={s.navbar__li}><NavLink to='/phones' className={s.link}>Phones</NavLink></li>

@@ -22,9 +22,13 @@ export const Register = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="px-4 py-3">
                 <div>
                     <h5 className="form-label">First Name</h5>
+                    {
+                        //creat your custom Input
+                        //https://prnt.sc/xkbbls
+                    }
                     <input name="firstName" type="text" className="form-control"
                         placeholder='Your First Name'
-                        style={{ height: '40px', width: '300px' }}
+                        style={{ height: '40px', width: '300px' }}//escape inline style
                         ref={register({ required: true })} />
                     {errors.firstName && errors.firstName.type === 'required' &&
                         <div className={s.error}>This field is required!</div>}

@@ -1,11 +1,11 @@
 import { InitialStateType } from '../Types/types';
 import { SET_ALL_PRODUCT } from './actionTypes';
 
-
-export const InitialState: any = {
+//typezation
+export const initialState: any = { //camelCase
     totalCount: 0
-
 }
+
 export const allProductsReducer = (state = InitialState, action: any): InitialStateType => {
     switch (action.type) {
         case SET_ALL_PRODUCT:

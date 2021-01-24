@@ -12,6 +12,17 @@ import { SortingReducer } from "./sortingReducer";
 import { searchProductReducer } from "./searchProductReducer";
 import { getSomeProductReducer } from "./someProductReducer";
 
+///about picture 
+/// assets
+/// assets/img
+/// assets/fonts
+/// assets/svg
+/// assets/style
+
+///utils
+///useHook - customHook
+///components/common
+
 const persistConfig = {
     key: 'root',
     storage,

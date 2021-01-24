@@ -6,6 +6,8 @@ import { deleteAllItems } from '../../redux/cartReducer'
 import { postCheckoutThunk } from '../../redux/createThunk'
 import { PreloaderFullScreen } from '../preloader/preloader'
 import s from './Login.module.scss'
+
+
 export const Checkout = () => {
     const stateCart = useSelector((state: any) => state.cart)
     const dispatch = useDispatch()
@@ -16,7 +18,8 @@ export const Checkout = () => {
         email: string
     }
     const onSubmit = (userInfo: userInfo, e: any) => {
-        stateCart.userInfo = userInfo
+        stateCart.userInfo = userInfo //useless
+        
         dispatch(postCheckoutThunk(stateCart))
         dispatch(deleteAllItems())
         e.target.reset()
@@ -28,7 +31,7 @@ export const Checkout = () => {
     return (
         <div>
             <PreloaderFullScreen />
-            {stateCart.cart.length === 0 ?
+            {stateCart.cart.length === 0 ?//selector 
                 <div >
                     <div className={s.someText}>Your cart is empty!</div>
                     <NavLink to='/home'>

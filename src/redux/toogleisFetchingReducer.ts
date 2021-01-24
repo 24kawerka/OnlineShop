@@ -11,7 +11,7 @@ type actionType = {
     isFetching: boolean
 }
 
-export const ToogleisFetchingReducer = (state = InitialIsFetchingState, action: actionType) => {
+const ToogleisFetchingReducer = (state = InitialIsFetchingState, action: actionType) => {
     switch (action.type) {
         case TOOGLE_IS_FETCHING: {
             return {
@@ -22,9 +22,11 @@ export const ToogleisFetchingReducer = (state = InitialIsFetchingState, action: 
         default: return state
     }
 }
-export const toogleIsFetching = (isFetching: boolean) => {
+const toogleIsFetching = (isFetching: boolean) => {
     return {
         type: TOOGLE_IS_FETCHING,
         isFetching
     }
 }
+
+export {ToogleisFetchingReducer, toogleIsFetching};//////// expory in the end of file (just tip)

@@ -20,7 +20,9 @@ export const Login = () => {
     }
     const onSubmit = (data: dataType, e: any) => {
         dispatch(getUsersThunk)
-        const result = state.find((item: any) => item.email === data.email && item.password === data.password)
+        const result = state.find((item: any) => item.email === data.email && item.password === data.password);
+
+        //SetNumber(result ? 2 : 3)
         if (result === undefined) {
             SetNumber(3)
         } else {
@@ -47,9 +49,16 @@ export const Login = () => {
                             <label className="form-label">Password</label>
                             <input name="password" className="form-control" type="password" placeholder='Password'
                                 style={{ height: '40px', width: '300px' }}
-                                ref={register({ required: true, minLength: 8 })} />
-                            {errors.password && errors.password.type === 'minLength' &&
-                                <div className={s.error}>Your password must have more 8 symbols</div>}
+                                ref={register({ required: {
+                                    ///!!!!!!!!!!!!!!!!!!!!
+                                    value: true,
+                                    message: 'This field is required!'
+                                }, minLength: {
+                                    value: 8,
+                                    message: 'Your password must have more 8 symbols'
+                                } })} />
+                            {errors.password &&
+                                <div className={s.error}>{errors.password.message}</div>}
                             {errors.password && errors.password.type === 'required' &&
                                 <div className={s.error}>This field is required!</div>}
                         </div>
