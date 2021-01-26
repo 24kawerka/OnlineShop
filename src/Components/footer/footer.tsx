@@ -8,7 +8,7 @@ import { Extras } from './extras/extras'
 import { ContactUs } from './contact-us/contact-us'
 
 
-export const Footer = () => {
+const Footer = () => {
     return (
         <footer className={s.footer}>
             <ContactUs />
@@ -21,3 +21,4 @@ export const Footer = () => {
     )
 }
 
+export {Footer}

@@ -1,0 +1,3 @@
+const LIMIT = 8
+const CURRENTPAGE = 1
+export { LIMIT, CURRENTPAGE }

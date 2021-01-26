@@ -1,12 +1,12 @@
 import React from 'react'
-import { PreloaderFullScreen } from '../../Other/preloader/preloader'
-import { BannerAdvertising } from './banner-advertising/banner-advertising'
-import { PopularProducts } from './popular-product/popular-products'
-import { PromicesCompany } from './promices-company/promices-company'
+import { PreloaderFullScreen } from '../../Utils/preloader/Preloader'
+import { BannerAdvertising } from './banner-advertising/Banner-advertising'
+import { PopularProducts } from './popular-product/Popular-products'
+import { PromicesCompany } from './promices-company/Promices-company'
 import { TopRated } from './top-rated/top-rated'
 
 
-export const Content = () => {
+const Content = () => {
 
     return (
         <div>
@@ -18,3 +18,4 @@ export const Content = () => {
         </div>
     )
 }
+export {Content}

@@ -1,7 +1,8 @@
 import React from 'react'
 
-export const TopRated=() => {
+const TopRated=() => {
     return (
         <></>
     )
 }
+export {TopRated}

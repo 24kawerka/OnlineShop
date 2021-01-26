@@ -1,18 +1,19 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom';
-import { PreloaderFullScreen } from '../../Other/preloader/preloader';
-import { addItem } from '../../redux/cartReducer';
-import { getReviewsThunk, getSomeProductThunk } from '../../redux/createThunk';
-//@ts-ignore
-import ReactStars from "react-rating-stars-component";
-import s from './someProduct.module.scss'
+import { PreloaderFullScreen } from '../../Utils/preloader/Preloader';
+import { addItem } from '../../redux/Cart/cartReducer';
+import { getReviewsThunk, getSomeProductThunk } from '../../redux/Utils/createThunk';
+import s from './SomeProduct.module.scss'
+import { rootReducerType } from '../../redux/Utils/reducer';
+const ReactStars: any = require("react-rating-stars-component").default
 
-type propsType = {
+
+type PropsType = {
     productId: number
 }
 
-export const SomeProduct = (props: propsType) => {
+const SomeProduct = (props: PropsType) => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getSomeProductThunk(props.productId))
@@ -22,8 +23,8 @@ export const SomeProduct = (props: propsType) => {
     }, [])
 
     const someProduct = useSelector((state: any) => state.someProduct.someProduct)
-    const stateCart = useSelector((state: any) => state.cart.cart.map((item: any) => item.id))
-    const stateReviews = useSelector((state: any) => state.reviews.reviews)
+    const stateCart = useSelector((state: rootReducerType) => state.cart.cart.map((item: any) => item.id))
+    const stateReviews = useSelector((state: rootReducerType) => state.reviews.reviews)
     if (someProduct === null) {
         return null
     }
@@ -36,9 +37,9 @@ export const SomeProduct = (props: propsType) => {
                     <h3>{someProduct.title}</h3>
                     <img src={someProduct.photo} alt='' className={s.photo} />
                 </div>
-                
+
                 <div className={s.info_block}>
-                    <div className={s.price_info}>Price:   {someProduct.price} grn</div>
+                    <div className={s.price_info}>Price:   {someProduct.price} UAH</div>
                     <ReactStars
                         value={someProduct.rating}
                         activeColor={'#fad105'}
@@ -91,4 +92,4 @@ export const SomeProduct = (props: propsType) => {
 
     )
 }
-
+export { SomeProduct }

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 
 
 
-export const HeaderCart = () => {
+const HeaderCart = () => {
     const state = useSelector((state: any) => state.cart)
     return (
         <div>
@@ -14,7 +14,7 @@ export const HeaderCart = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item disabled><span> items:{state.cart.length}, cost: {state.totalPrice} grn</span></Dropdown.Item>
+                    <Dropdown.Item disabled><span> items:{state.cart.length}, cost: {state.totalPrice} UAH</span></Dropdown.Item>
                     <Dropdown.Item href="/cart">Сart</Dropdown.Item>
                     <Dropdown.Item href="/checkout">Checkout</Dropdown.Item>
                 </Dropdown.Menu>
@@ -24,3 +24,4 @@ export const HeaderCart = () => {
 
     )
 }
+export { HeaderCart }

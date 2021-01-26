@@ -216,6 +216,13 @@
       "email": "qwewerka@gmail.com",
       "password": "12345678",
       "id": 1
+    },
+    {
+      "firstName": "Olga",
+      "lastName": "11111111111",
+      "email": "qwewerka@gmail.com",
+      "password": "22222222222222222222",
+      "id": 2
     }
   ],
   "reviews": [
@@ -267,6 +274,20 @@
       "rating": "5",
       "productId": "9",
       "id": 7
+    },
+    {
+      "name": "Romeo",
+      "message": "Good phone for games",
+      "rating": "5",
+      "productId": "4",
+      "id": 8
+    },
+    {
+      "name": "Jack",
+      "message": "Nice color",
+      "rating": "5",
+      "productId": "7",
+      "id": 9
     }
   ],
   "checkout": [

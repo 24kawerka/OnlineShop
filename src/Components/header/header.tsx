@@ -1,13 +1,13 @@
 import React from 'react';
 import './../../App.scss'
 import './header.scss'
-import { SearchForm } from './search-form/search-form';
-import logo from './../../Pictures/Icons/logo.png'
+import { SearchForm } from './search-form/Search-form';
+import logo from './../../Assets/img/logo.png'
 import { NavLink } from 'react-router-dom';
-import { HeaderCart } from './headerCart';
+import { HeaderCart } from './HeaderCart';
 import { Dropdown } from 'react-bootstrap';
 
-export const Header = () => {
+const Header = () => {
     return (
         <header className='header'>
             <NavLink to='/home'><img src={logo}
@@ -38,3 +38,4 @@ export const Header = () => {
         </header>
     )
 }
+export { Header }

@@ -1,11 +1,11 @@
 import React from 'react'
 import s from './promices-company.module.scss'
-import customerservice from './../../../Pictures/Icons/Promices-company/customer-service.png'
-import car from './../../../Pictures/Icons/Promices-company/delivery-truck.png'
-import giftbox from './../../../Pictures/Icons/Promices-company/giftbox.png'
-import moneybox from './../../../Pictures/Icons/Promices-company/moneybox.png'
+import customerservice from './../../../Assets/img/Promices-company/customer-service.png'
+import car from './../../../Assets/img/Promices-company/delivery-truck.png'
+import giftbox from './../../../Assets/img/Promices-company/giftbox.png'
+import moneybox from './../../../Assets/img/Promices-company/moneybox.png'
 
-export const PromicesCompany = () => {
+const PromicesCompany = () => {
     return (
         <div className={s.promices_company}>
             <div className={s.promices_company__element}>
@@ -35,3 +35,4 @@ export const PromicesCompany = () => {
         </div>
     )
 }
+export { PromicesCompany }

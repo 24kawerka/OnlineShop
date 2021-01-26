@@ -1,9 +1,9 @@
 import React from 'react'
 import './social-networks.scss'
-import twitter from './../../../Pictures/Icons/social-networks/twitter.png'
-import instagram from './../../../Pictures/Icons/social-networks/instagram.png'
-import facebook from './../../../Pictures/Icons/social-networks/facebook.png'
-import pinterest from './../../../Pictures/Icons/social-networks/pinterest.png'
+import twitter from './../../../Assets/img/social-networks/twitter.png'
+import instagram from './../../../Assets/img/social-networks/instagram.png'
+import facebook from './../../../Assets/img/social-networks/facebook.png'
+import pinterest from './../../../Assets/img/social-networks/pinterest.png'
 
 export const SocialNetworks = () => {
     return (

@@ -1,8 +1,8 @@
 import React from 'react'
 // import Swiper core and required components
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-import banner0 from './../../../Pictures/swiper/0.png'
-import banner1 from './../../../Pictures/swiper/1.png'
+import banner0 from './../../../Assets/swiper/0.png'
+import banner1 from './../../../Assets/swiper/1.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './banner-advertising.scss'
 import 'swiper/swiper.scss';
@@ -15,7 +15,7 @@ import { NavLink } from 'react-router-dom';
 // install Swiper components
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
-export const BannerAdvertising = () => {
+const BannerAdvertising = () => {
     return (
         <div>
             <Swiper
@@ -35,3 +35,4 @@ export const BannerAdvertising = () => {
         </div>
     );
 };
+export { BannerAdvertising }

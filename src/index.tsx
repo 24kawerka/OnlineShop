@@ -4,10 +4,10 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import { App } from './App';
 import { BrowserRouter, Route } from 'react-router-dom'
-import { store, persistor } from './redux/createStore';
+import { store, persistor } from './redux/Utils/createStore';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
-import ScrollToTop from './Other/scrollToTop';
+import ScrollToTop from './Utils/ScrollToTop';
 
 
 

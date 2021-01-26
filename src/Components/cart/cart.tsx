@@ -1,12 +1,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { PreloaderFullScreen } from '../../Other/preloader/preloader';
-import { decrement, deleteAllItems, deleteItem, increment } from '../../redux/cartReducer';
-import { pType } from '../../Types/types';
+import { PreloaderFullScreen } from '../../Utils/preloader/Preloader';
+import { decrement, deleteAllItems, deleteItem, increment } from '../../redux/Cart/cartReducer';
+import { ProductInfoType } from '../../Types/types';
 import s from './cart.module.scss'
 
-export const Cart = () => {
+
+const Cart = () => {
     const dispatch = useDispatch();
     const state = useSelector((state: any) => state.cart)
     return (
@@ -21,7 +22,7 @@ export const Cart = () => {
                 </div> :
                 <div>
                     <div className={s.total_container}>
-                        <h3 className={s.total}> Total:{state.totalPrice} grn</h3>
+                        <h3 className={s.total}> Total:{state.totalPrice} UAH</h3>
                         <NavLink to='/checkout'>
                             <button className="btn btn-primary"
                                 style={{ marginRight: '20px', height: '35px' }}
@@ -33,14 +34,14 @@ export const Cart = () => {
                         >
                             Delete All</button>
                     </div>
-                    {state.cart.map((p: pType, index: number) => (
+                    {state.cart.map((p: ProductInfoType, index: number) => (
                         <div key={p.id} className={s.container}>
                             <img src={p.photo} alt='' className={s.photoSmall} />
                             <div>
                                 <NavLink to={`/product/${p.id}`} >
                                     <div className={s.title}>{p.title}</div>
                                 </NavLink>
-                                <div className={s.price}>{p.price} grn</div>
+                                <div className={s.price}>{p.price} </div>
                                 <button onClick={() => dispatch(deleteItem(p, index))}
                                     className="btn btn-primary">
                                     delete from cart
@@ -68,3 +69,4 @@ export const Cart = () => {
         </div>
     )
 }
+export { Cart }

@@ -1,11 +1,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useHistory } from 'react-router-dom';
-import { getSearchProductsThunk } from '../../../redux/createThunk';
-import { setValue } from '../../../redux/searchProductReducer';
+import { getSearchProductsThunk } from '../../../redux/Utils/createThunk';
+import { setValue } from '../../../redux/Utils/searchProductReducer';
 import './search-form.scss'
 
-export const SearchForm = () => {
+const SearchForm = () => {
     const history = useHistory()
     const dispatch = useDispatch()
     const resultSearch = useSelector((state: any) => state.searchProduct.resultSearch)
@@ -30,7 +30,7 @@ export const SearchForm = () => {
 
     return (
         <div className='search-form'>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+
             <form className="example"
                 onKeyPress={(e) => onKeyPressEvent(e, resultSearch)}>
                 <div className='search_container'>
@@ -62,3 +62,4 @@ export const SearchForm = () => {
         </div >
     )
 }
+export { SearchForm }
