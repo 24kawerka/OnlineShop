@@ -17,7 +17,7 @@ const SearchResult = (props: any) => {
         <div className='container'>
             <SortingButton />
             <div className='row'>
-                {resultSearch.map((p: ProductInfoType) => (
+                {resultSearch.filter((a:ProductInfoType) => a.title.startsWith('a')).map((p: ProductInfoType) => (
                     <div key={p.id} className='col-lg-3 col-md-3 col-sm-4 col-xs-12 mh-100' style={{ height: '500px' }} >
                         <div className={s.row__block}>
                             <img src={p.photo} alt='' width='180px' height='150px' className={s.photo} />

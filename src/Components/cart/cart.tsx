@@ -5,11 +5,14 @@ import { PreloaderFullScreen } from '../../Utils/preloader/Preloader';
 import { decrement, deleteAllItems, deleteItem, increment } from '../../redux/Cart/cartReducer';
 import { ProductInfoType } from '../../Types/types';
 import s from './cart.module.scss'
+import cartSelector from '../../redux/Cart/cartSelector';
 
-
+// folder UpperCase
 const Cart = () => {
     const dispatch = useDispatch();
-    const state = useSelector((state: any) => state.cart)
+    const state = useSelector(cartSelector.getCart); // 
+    //const state = useSelector(selectorGetCart); // 
+
     return (
         <div>
             <PreloaderFullScreen />
@@ -43,7 +46,11 @@ const Cart = () => {
                                 </NavLink>
                                 <div className={s.price}>{p.price} </div>
                                 <button onClick={() => dispatch(deleteItem(p, index))}
+                            
                                     className="btn btn-primary">
+                                          {
+                                    // () => dispatch(deleteItem(p, index) on the top
+                                }
                                     delete from cart
                                 </button>
                                 <div>

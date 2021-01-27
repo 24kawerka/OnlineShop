@@ -32,6 +32,7 @@ const SearchForm = () => {
         <div className='search-form'>
 
             <form className="example"
+            onSubmit={e => e.preventDefault()}
                 onKeyPress={(e) => onKeyPressEvent(e, resultSearch)}>
                 <div className='search_container'>
                     <input
