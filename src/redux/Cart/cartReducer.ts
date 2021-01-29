@@ -115,4 +115,4 @@ const cartReducer = (state = InitialStateCart, action: CartReducerAC) => {
     }
 };
 
-export { addItem, deleteItem, increment, decrement, deleteAllItems, cartReducer, }
+export { addItem, deleteItem, increment, decrement, deleteAllItems, cartReducer}

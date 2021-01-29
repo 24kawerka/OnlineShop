@@ -5,8 +5,10 @@ import { PreloaderFullScreen } from '../../Utils/preloader/Preloader';
 import { addItem } from '../../redux/Cart/cartReducer';
 import { getReviewsThunk, getSomeProductThunk } from '../../redux/Utils/createThunk';
 import s from './SomeProduct.module.scss'
-import { rootReducerType } from '../../redux/Utils/reducer';
+import cartSelector from './../../redux/Cart/cartSelector'
+import productSelector from './../../redux/Products/productSelector'
 const ReactStars: any = require("react-rating-stars-component").default
+
 
 
 type PropsType = {
@@ -22,9 +24,11 @@ const SomeProduct = (props: PropsType) => {
         dispatch(getReviewsThunk)
     }, [])
 
-    const someProduct = useSelector((state: any) => state.someProduct.someProduct)
-    const stateCart = useSelector((state: rootReducerType) => state.cart.cart.map((item: any) => item.id))
-    const stateReviews = useSelector((state: rootReducerType) => state.reviews.reviews)
+    const someProduct = useSelector(productSelector.getSomeProduct)
+    let cartItems = useSelector(cartSelector.getCartItems)
+    cartItems = cartItems.map((item: any) => item.id)
+    const stateReviews = useSelector(productSelector.getReviews)
+
     if (someProduct === null) {
         return null
     }
@@ -52,7 +56,7 @@ const SomeProduct = (props: PropsType) => {
                     <div className={s.product_info}>Number of Cores: {someProduct.Number_of_Cores}</div>
                     <div className={s.product_info}>Inner memory: {someProduct.inner_memory}</div>
                     <div className={s.product_info}>Protection standard: {someProduct.Protection_standard}</div>
-                    {stateCart.includes(someProduct.id) ? <button className="btn btn-success"
+                    {cartItems.includes(someProduct.id) ? <button className="btn btn-success"
                         style={{ width: '300px', height: '100px', marginTop: '40px' }}
                     ><p className={s.button_text}>Added</p></button> :
                         <button onClick={() => dispatch(addItem(someProduct))}

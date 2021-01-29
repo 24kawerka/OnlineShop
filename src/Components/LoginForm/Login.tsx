@@ -6,7 +6,7 @@ import { getUsersThunk } from '../../redux/Utils/createThunk';
 import { rootReducerType } from '../../redux/Utils/reducer';
 import { PreloaderFullScreen } from '../../Utils/preloader/Preloader';
 import s from './Login.module.scss'
-
+import usersSelector from './../../redux/Users/usersSelector'
 
 
 
@@ -14,14 +14,14 @@ const Login = () => {
     const [numberState, SetNumber] = useState(1)
     const { register, handleSubmit, errors } = useForm();
     const dispatch = useDispatch()
-    const state = useSelector((state: rootReducerType) => state.users.users)
+    const users = useSelector(usersSelector.getUsers)
     type DataType = {
         email: string,
         password: string
     }
     const onSubmit = (data: DataType, e: any) => {
         dispatch(getUsersThunk)
-        const result = state.find((item: any) => item.email === data.email && item.password === data.password)
+        const result = users.find((item: any) => item.email === data.email && item.password === data.password)
         if (result === undefined) {
             SetNumber(3)
         } else {

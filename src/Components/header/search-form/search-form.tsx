@@ -3,13 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useHistory } from 'react-router-dom';
 import { getSearchProductsThunk } from '../../../redux/Utils/createThunk';
 import { setValue } from '../../../redux/Utils/searchProductReducer';
+import utilsSelector from './../../../redux/Utils/utilsSelector'
+
 import './search-form.scss'
 
 const SearchForm = () => {
     const history = useHistory()
     const dispatch = useDispatch()
-    const resultSearch = useSelector((state: any) => state.searchProduct.resultSearch)
-    const newValue: string = useSelector((state: any) => state.searchProduct.value)
+    const resultSearch = useSelector(utilsSelector.resultSearch)
+    const inputValue: string = useSelector(utilsSelector.inputValue)
     const SearchProduct = (value: any) => {
         dispatch(getSearchProductsThunk(value))
         dispatch(setValue(value))
@@ -22,23 +24,18 @@ const SearchForm = () => {
         dispatch(setValue(''))
 
     }
-    const onKeyPressEvent = (e: any, resultSearch: Array<Object>) => {
-        if (e.key === 'Enter') {
-            e.preventDefault()
-        }
-    }
 
     return (
         <div className='search-form'>
 
             <form className="example"
-                onKeyPress={(e) => onKeyPressEvent(e, resultSearch)}>
+                onSubmit={(e: any) => { e.preventDefault() }}>
                 <div className='search_container'>
                     <input
                         type="text" placeholder="Search..." autoComplete="off"
                         onChange={(e: any) => SearchProduct(e.target.value)}
-                        value={newValue} />
-                    {newValue !== '' && (
+                        value={inputValue} />
+                    {inputValue !== '' && (
                         <ul className='ul_search'>
                             {resultSearch
                                 .map((item: any) => (

@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { ProductThunk } from '../../redux/Utils/createThunk'
-import { rootReducerType } from '../../redux/Utils/reducer'
 import { set_asc_order, set_desc_order, set_desc_rating_order } from '../../redux/Utils/sortingReducer'
+import utilsSelector from '../../redux/Utils/utilsSelector'
 
 const SortingButton = () => {
     const dispatch = useDispatch()
-    const paginationState: any = useSelector((state: rootReducerType) => state.pagination)
-    const sortParam: any = useSelector((state: rootReducerType) => state.sort)
+    const currentPage = useSelector(utilsSelector.getCurrentPage)
+    const limitProducts = useSelector(utilsSelector.getLimitProducts)
+    const sortParam: any = useSelector(utilsSelector.sortParam)
+    const order: any = useSelector(utilsSelector.sortOrder)
 
     const sortByInput = (e: any) => {
         console.log(e.target.value);
@@ -24,7 +26,7 @@ const SortingButton = () => {
 
     }
     useEffect(() => {
-        dispatch(ProductThunk(paginationState.currentPage, paginationState.limitProducts, sortParam.sortParam, sortParam.order))
+        dispatch(ProductThunk(currentPage, limitProducts, sortParam, order))
     }, [sortParam])
 
     return (

@@ -8,7 +8,7 @@ import { toogleIsFetching } from './toogleisFetchingReducer';
 import { getUsers } from '../Users/usersReducer';
 import { instance } from '../../Constants/reduxConstans';
 
-const ProductThunk = (currentPage: number, limitProducts: number, sortParam: any, order: string) =>
+const ProductThunk = (currentPage: any, limitProducts: any, sortParam: any, order: string) =>
     async (dispatch: any) => {
         dispatch(toogleIsFetching(true))
         await instance.get(`/product?_sort=${sortParam}&_order=${order}&_page=${currentPage}&_limit=${limitProducts}`)

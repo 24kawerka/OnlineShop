@@ -4,18 +4,21 @@ import { ProductThunk } from '../../redux/Utils/createThunk'
 import { setCurrentPage } from '../../redux/Utils/paginationReducer'
 import s from './pagination.module.scss'
 import ReactPaginate from 'react-paginate'
-import { rootReducerType } from '../../redux/Utils/reducer'
+import productSelector from './../../redux/Products/productSelector'
+import utilsSelector from '../../redux/Utils/utilsSelector'
+
 
 const PaginationPage = () => {
-    const paginationState = useSelector((state: rootReducerType) => state.pagination)
-    const totalCount = useSelector((state: rootReducerType) => state.allProducts.totalCount)
-    const pagesCount = Math.ceil(totalCount / paginationState.limitProducts)
-    const sortParam: any = useSelector((state: rootReducerType) => state.sort)
+    const limitProducts = useSelector(utilsSelector.getLimitProducts)
+    const totalCount = useSelector(productSelector.getTotalCount)
+    const pagesCount = Math.ceil(totalCount / limitProducts)
+    const sortParam: any = useSelector(utilsSelector.sortParam)
+    const order: any = useSelector(utilsSelector.sortOrder)
     const dispatch = useDispatch()
 
     const handleClick = (p: any) => {
         dispatch(setCurrentPage(p.selected + 1))
-        dispatch(ProductThunk(p.selected + 1, paginationState.limitProducts, sortParam.sortParam, sortParam.order))
+        dispatch(ProductThunk(p.selected + 1, limitProducts, sortParam, order))
     }
     if (totalCount < 8) {
         return null

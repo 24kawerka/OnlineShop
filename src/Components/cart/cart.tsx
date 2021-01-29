@@ -2,18 +2,23 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { PreloaderFullScreen } from '../../Utils/preloader/Preloader';
-import { decrement, deleteAllItems, deleteItem, increment } from '../../redux/Cart/cartReducer';
 import { ProductInfoType } from '../../Types/types';
 import s from './cart.module.scss'
+import { decrement, deleteAllItems, deleteItem, increment } from '../../redux/Cart/cartReducer';
+import cartSelector from './../../redux/Cart/cartSelector'
+
+
 
 
 const Cart = () => {
     const dispatch = useDispatch();
-    const state = useSelector((state: any) => state.cart)
+    const totalPriceCart = useSelector(cartSelector.getTotalPrice)
+    const cartItems = useSelector(cartSelector.getCartItems)
+
     return (
         <div>
             <PreloaderFullScreen />
-            {state.cart.length === 0 ?
+            {cartItems.length === 0 ?
                 <div>
                     <div className={s.someText}>Your cart is empty!</div>
                     <NavLink to='/home'>
@@ -22,7 +27,7 @@ const Cart = () => {
                 </div> :
                 <div>
                     <div className={s.total_container}>
-                        <h3 className={s.total}> Total:{state.totalPrice} UAH</h3>
+                        <h3 className={s.total}> Total:{totalPriceCart} UAH</h3>
                         <NavLink to='/checkout'>
                             <button className="btn btn-primary"
                                 style={{ marginRight: '20px', height: '35px' }}
@@ -34,7 +39,7 @@ const Cart = () => {
                         >
                             Delete All</button>
                     </div>
-                    {state.cart.map((p: ProductInfoType, index: number) => (
+                    {cartItems.map((p: ProductInfoType, index: number) => (
                         <div key={p.id} className={s.container}>
                             <img src={p.photo} alt='' className={s.photoSmall} />
                             <div>

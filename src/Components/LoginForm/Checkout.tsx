@@ -6,11 +6,12 @@ import { deleteAllItems } from '../../redux/Cart/cartReducer'
 import { postCheckoutThunk } from '../../redux/Utils/createThunk'
 import { PreloaderFullScreen } from '../../Utils/preloader/Preloader'
 import s from './Login.module.scss'
+import cartSelector from '../../redux/Cart/cartSelector'
 
 
 const Checkout = () => {
-    const stateCart = useSelector((state: any) => state.cart.cart)
-    const stateCartLength = stateCart.length
+    const cartItems = useSelector(cartSelector.getCartItems)
+    const stateCartLength = cartItems.length
 
     const dispatch = useDispatch()
     const { register, handleSubmit, errors } = useForm()
@@ -20,8 +21,8 @@ const Checkout = () => {
         email: string
     }
     const onSubmit = (userInfo: userInfo, e: any) => {
-        stateCart.userInfo = userInfo
-        dispatch(postCheckoutThunk(stateCart))
+        cartItems.userInfo = userInfo
+        dispatch(postCheckoutThunk(cartItems))
         dispatch(deleteAllItems())
         e.target.reset()
         alert('Thanks for your choice, our operator will call you')

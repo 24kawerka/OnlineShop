@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import './App.scss'
-import { Header } from './Components/header/Header'
-import { Navbar } from './Components/navbar/navbar';
-import { Footer } from './Components/footer/footer';
-import { Categories } from './Components/categories/Categories';
+import { Header } from './Components/Header/Header'
+import { Navbar } from './Components/Navbar/navbar';
+import { Footer } from './Components/Footer/footer';
+import { Categories } from './Components/Categories/Categories';
 import { Routes } from './routes';
 
 
